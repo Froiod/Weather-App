@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="./css/styles.css">
   <title>Weather App</title>
 </head>
-<body>
-  <div class="container text-center flex flex-col justify-center items-center h-[100vh]">
+<body class="bg-cyan-500">
+  <div class="container text-center flex flex-col justify-center items-center h-[100vh] mx-auto">
     <h1 class="text-center text-2xl font-bold mt-4">Weathering with You</h1>
-    <form class="text-center my-2 mx-auto max-w-md">
+    <form class="text-center mt-2 mb-16 mx-auto max-w-md">
       <label for="city" class="text-lg my-2">Enter a location for weather information</label>
       <input type="text" name="city" class="block p-2 my-2 pl-10 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     </form>
-    <div class="card h-[400px] w-[300px] bg-cyan-500">
-      <div class="w-[100px] h-[100px] mx-auto"> 
+    <div class="card h-[400px] w-[300px] rounded-lg">
+      <div class="relative w-[100px] h-[100px] mx-auto bg-white rounded-full -top-[50px]"> 
         <!-- icon -->
         <img src="" class="icon"> 
       </div>
       <div class="details text-center space-y-16">
-        <h5 class="text-xl font-semibold bg-white p-2 inline-block mt-4 rounded-lg">City Name</h5>
+        <h5 class="text-xl font-semibold p-2 mt-4 rounded-lg">City Name</h5>
         <div class="capitalize text-lg">Weather Condition</div>
         <div class="pb-4 text-3xl">
           <span>temp</span>

@@ -11,8 +11,8 @@ const updateUI = (data) => {
 
   // update details
   details.innerHTML = `
-    <h5 class="text-xl font-semibold bg-white p-2 inline-block mt-4 rounded-lg">${cityDetails.name}</h5>
-    <div class="capitalize text-lg">${weather.weather[0].description}</div>
+    <h5 class="text-3xl font-semibold mt-4 rounded-lg">${cityDetails.name}</h5>
+    <div class="capitalize text-xl">${weather.weather[0].description}</div>
     <div class="pb-4 text-3xl">
       <span>${(weather.main.temp - 273.15).toFixed(2)}</span>
       <span>&deg; C</span>
@@ -23,9 +23,15 @@ const updateUI = (data) => {
   const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
 
   if (icon[2] === 'd') {
-    card.setAttribute('class', 'day')
+    card.classList.remove('night')
+    card.classList.add('day')
+    details.classList.remove('white')
+    details.classList.add('black')
   } else {
-    card.setAttribute('class', 'night')
+    card.classList.remove('day')
+    card.classList.add('night')
+    details.classList.remove('black')
+    details.classList.add('white')
   }
 
   iconSrc.setAttribute('src', iconURL)
