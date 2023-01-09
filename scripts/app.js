@@ -1,7 +1,6 @@
 const cityForm = document.querySelector('form')
 const card = document.querySelector('.card')
 const details = document.querySelector('.details')
-const time = document.querySelector('img.time')
 const iconSrc = document.querySelector('.icon')
 
 
@@ -21,16 +20,14 @@ const updateUI = (data) => {
   `
   // update the night/day
   const icon = weather.weather[0].icon //get icon d/n(day/night)
-  let timeSrc = null
   const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
 
   if (icon[2] === 'd') {
-    timeSrc = './img/day.jpg'
+    card.setAttribute('class', 'day')
   } else {
-    timeSrc = './img/night.jpg'
+    card.setAttribute('class', 'night')
   }
 
-  // time.setAttribute('src', timeSrc)
   iconSrc.setAttribute('src', iconURL)
 
 }

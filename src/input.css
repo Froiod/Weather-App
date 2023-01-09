@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.day {
+  background-image: url('../img/day.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+}
+
+.night {
+  background-image: url('../img/night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+}
