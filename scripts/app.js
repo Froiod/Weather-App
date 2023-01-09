@@ -2,7 +2,7 @@ const cityForm = document.querySelector('form')
 const card = document.querySelector('.card')
 const details = document.querySelector('.details')
 const time = document.querySelector('img.time')
-const iconSrc = document.querySelector('.icon img')
+const iconSrc = document.querySelector('.icon')
 
 
 const updateUI = (data) => {
@@ -25,12 +25,12 @@ const updateUI = (data) => {
   const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
 
   if (icon[2] === 'd') {
-    timeSrc = './img/day.svg'
+    timeSrc = './img/day.jpg'
   } else {
-    timeSrc = './img/night.svg'
+    timeSrc = './img/night.jpg'
   }
 
-  time.setAttribute('src', timeSrc)
+  // time.setAttribute('src', timeSrc)
   iconSrc.setAttribute('src', iconURL)
 
 }
