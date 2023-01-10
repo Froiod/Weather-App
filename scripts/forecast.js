@@ -1,4 +1,4 @@
-const key = 'put your API Key here' //API key
+const key = 'ce8bee9fc3561bef8ff534a312ea01a4' // get your own Key from https://api.openweathermap.org and change this key
 
 // convert City Name into location coordinates
 const getCity = async (city) => {
