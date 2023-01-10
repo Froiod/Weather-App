@@ -20,7 +20,7 @@ const updateUI = (data) => {
   `
   // update the night/day
   const icon = weather.weather[0].icon //get icon d/n(day/night)
-  const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
+  const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`
 
   if (icon[2] === 'd') {
     card.classList.remove('night')
