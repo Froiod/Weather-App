@@ -1,4 +1,4 @@
-const key = 'ce8bee9fc3561bef8ff534a312ea01a4' //API key
+const key = config.API_KEY //API key
 
 // convert City Name into location coordinates
 const getCity = async (city) => {
