@@ -36,6 +36,11 @@ const updateUI = (data) => {
 
   iconSrc.setAttribute('src', iconURL)
 
+  // show card
+  if (card.classList.contains('hidden')) {
+    card.classList.remove('hidden')
+  }
+
 }
 
 const cityUpdate = async (city) => {
