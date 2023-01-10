@@ -3,7 +3,7 @@ const key = 'ce8bee9fc3561bef8ff534a312ea01a4' // get your own Key from https://
 // convert City Name into location coordinates
 const getCity = async (city) => {
 
-  const base = 'http://api.openweathermap.org/geo/1.0/direct?'
+  const base = 'https://api.openweathermap.org/geo/1.0/direct?'
   const query = `q=${city}&limit=5&appid=${key}`
 
   const response = await fetch(base + query)
