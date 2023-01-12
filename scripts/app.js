@@ -78,3 +78,15 @@ if (localStorage.getItem('city')) {
     .catch(err => console.log(err))
 }
 
+const hideMobileKeyboardOnReturn = (element) => {
+  element.addEventListener('keyup', (keyboardEvent) => {
+      const key = keyboardEvent.code || keyboardEvent.keyCode;
+      if (key === 'Enter' || key === 13) {
+          element.blur();
+      }
+  });
+};
+
+document.querySelementectorAll('[type=search]').forEach((element) => {
+  hideMobileKeyboardOnReturn(element);
+}); 
