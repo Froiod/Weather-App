@@ -69,6 +69,16 @@ cityForm.addEventListener('submit', e => {
 
   // store city in local storage
   localStorage.setItem('city', city)
+
+  // hide keyboard in mobile after search is click
+  const hideMobileKeyboardOnReturn = (element) => {
+  element.addEventListener('keyup', (keyboardEvent) => {
+      const key = keyboardEvent.code || keyboardEvent.keyCode;
+      if (key === 'Enter' || key === 13) {
+          element.blur();
+      }
+  });
+};
 })
 
 if (localStorage.getItem('city')) {
@@ -77,12 +87,3 @@ if (localStorage.getItem('city')) {
     .catch(err => console.log(err))
 }
 
-// hide keyboard in mobile after search is click
-const hideMobileKeyboardOnReturn = (element) => {
-  element.addEventListener('keyup', (keyboardEvent) => {
-      const key = keyboardEvent.code || keyboardEvent.keyCode;
-      if (key === 'Enter' || key === 13) {
-          element.blur();
-      }
-  });
-};
