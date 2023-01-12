@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.body-day {
+  @apply bg-cyan-100 text-black
+}
+
+.body-night {
+  @apply bg-gray-700 text-white
+}
 .day {
   background-image: url('../img/day.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 350px;
   height: 400px;
+}
+.day {
+  @apply shadow-xl shadow-cyan-700
+}
+
+.night {
+  @apply shadow-xl shadow-gray-900
 }
 
 .night {

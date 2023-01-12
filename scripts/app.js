@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const cityForm = document.querySelector('form')
 const card = document.querySelector('.card')
 const details = document.querySelector('.details')
@@ -27,11 +28,13 @@ const updateUI = (data) => {
     card.classList.add('day')
     details.classList.remove('white')
     details.classList.add('black')
-  } else {
+    body.setAttribute('class', 'body-day')
+  } else if(icon[2] === 'n') {
     card.classList.remove('day')
     card.classList.add('night')
     details.classList.remove('black')
     details.classList.add('white')
+    body.setAttribute('class', 'body-night')
   }
 
   iconSrc.setAttribute('src', iconURL)
