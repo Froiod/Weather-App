@@ -87,6 +87,6 @@ const hideMobileKeyboardOnReturn = (element) => {
   });
 };
 
-document.querySelementectorAll('[type=submit]').forEach((element) => {
+document.querySelementectorAll('[type=text]').forEach((element) => {
   hideMobileKeyboardOnReturn(element);
 }); 
