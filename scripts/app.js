@@ -80,11 +80,11 @@ if (localStorage.getItem('city')) {
 
 // hide keyboard in mobile after search is click
 const hideMobileKeyboardOnReturn = (element) => {
-  element.attr('readonly', 'readonly')
-  element.attr('disabled', 'true')
+  element.setAttribute('readonly', 'readonly')
+  element.setAttribute('disabled', 'true')
   setTimeout(() => {
     element.blur()
-    element.removeAttr('readonly')
-    element.removeAttr('disabled')
+    element.removeAttribute('readonly')
+    element.removeAttribute('disabled')
   }, 100);
 };
