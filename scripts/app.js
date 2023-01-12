@@ -70,6 +70,8 @@ cityForm.addEventListener('submit', e => {
   // store city in local storage
   localStorage.setItem('city', city)
 
+  hideMobileKeyboardOnReturn()
+
 })
 
 if (localStorage.getItem('city')) {
