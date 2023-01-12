@@ -70,8 +70,6 @@ cityForm.addEventListener('submit', e => {
   // store city in local storage
   localStorage.setItem('city', city)
 
-  hideMobileKeyboardOnReturn()
-
 })
 
 if (localStorage.getItem('city')) {
@@ -80,13 +78,3 @@ if (localStorage.getItem('city')) {
     .catch(err => console.log(err))
 }
 
-// hide keyboard in mobile after search is click
-const hideMobileKeyboardOnReturn = (element) => {
-  element.setAttribute('readonly', 'readonly')
-  element.setAttribute('disabled', 'true')
-  setTimeout(() => {
-    element.blur()
-    element.removeAttribute('readonly')
-    element.removeAttribute('disabled')
-  }, 100);
-};
